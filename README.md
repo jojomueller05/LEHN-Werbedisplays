@@ -1,5 +1,8 @@
 # LEHN-Werbedisplays
 
+- [Erste Schritte](#erste-schritte)
+    - [Voraussetzungen](#voraussetzungen)
+    - [Installation](#installation)
 - [Ordnerstruktur](#Ordnerstruktur)
     - [app](#app)
     - [build](#build)
@@ -7,12 +10,36 @@
     - [uploads](#uploads)
 <br>
 
-Repository Klonen:
+In diesem Repository ist eine Webapplikation, die verwendet wird,
+um die Werbedisplays in den Filialen von Lehner-Versand AG zu steuern.
+# Erste Schritte
+Damit man die Webapplikation verwenden kann, muss man vorher einige Vorbereitungen machen.
+
+## Voraussetzungen
+- Docker <br>
+&#8594; [Linux Installation](https://docs.docker.com/engine/install/ubuntu/)<br>
+&#8594; [Windows](https://docs.docker.com/desktop/install/windows-install/)
+- Git<br>
+&#8594; Linux: 
+
+``` 
+sudo apt install git 
+```
+&#8594; [Windows](https://git-scm.com/download/win)
+
+## Installation
+1. Repository Klonen:
 ```
 git clone git@github.com:jojomueller05/LEHN-Werbedisplays.git
 ```
-In diesem Repository ist eine Webapplikation, die verwendet wird,
-um die Werbedisplays in den Filialen von Lehner-Versand AG zu steuern.
+2. In das verzeichnis Build wechseln
+```
+cd ./LEHN-Werbedisplays/build
+```
+3. Applikation mit Docker starten
+```
+sudo docker-compose up -d
+``` 
 
 # Ordnerstruktur
 Hier ein kleiner Überblick über die Ordnerstrucktur der Website.
