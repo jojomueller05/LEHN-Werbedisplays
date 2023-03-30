@@ -5,6 +5,7 @@
 - [Erste Schritte](#erste-schritte)
     - [Voraussetzungen](#voraussetzungen)
     - [Installation](#installation)
+- [Backup & Shutdown](#backup--shutdown)
 - [Ordnerstruktur](#Ordnerstruktur)
     - [app](#app)
     - [build](#build)
@@ -54,6 +55,15 @@ cd ./LEHN-Werbedisplays/build
 ```
 sudo docker-compose up -d
 ``` 
+# Backup & Shutdown
+Da die Datenbank dieser Applikation auch in einem Docker Conntainer ist, muss man vor dem Herunterfahren der Container, einen SQL DUMP auf der DB machen.
+
+Wenn man die Appliaktion, bzw. die Container wieder hochfahren möchte, muss man den SQL DUMP in die Datei [init.sql](./build/sql-install/init.sql) kopieren. Docker baut anhand dieser Datei den DB Container auf.
+
+**Container herunterfahren:**
+```
+sudo docker-compose down --volumes
+```
 
 # Ordnerstruktur
 Hier ein kleiner Überblick über die Ordnerstrucktur der Website.
