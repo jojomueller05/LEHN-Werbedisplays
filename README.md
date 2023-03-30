@@ -1,5 +1,7 @@
 # LEHN-Werbedisplays
 
+- [Über das Projekt](#über-das-projekt)
+    - [Gebaut mit](#gebaut-mit)
 - [Erste Schritte](#erste-schritte)
     - [Voraussetzungen](#voraussetzungen)
     - [Installation](#installation)
@@ -8,10 +10,22 @@
     - [build](#build)
     - [docs](#docs)
     - [uploads](#uploads)
+- [Kontakt](#kontakt)
 <br>
 
+# Über das Projekt
 In diesem Repository ist eine Webapplikation, die verwendet wird,
 um die Werbedisplays in den Filialen von Lehner-Versand AG zu steuern.
+
+## Gebaut mit
+Dieses Projekt habe ich gebaut mit:
+- Docker
+- HTML
+- CSS
+- JavaScript
+- Bootstrap5
+- PHP
+
 # Erste Schritte
 Damit man die Webapplikation verwenden kann, muss man vorher einige Vorbereitungen machen.
 
@@ -70,3 +84,7 @@ In diesen Ordner kommen alle Konzepte, Anleitungen, Planungen, Zeichnungen usw.
 
 ## [uploads](./uploads/)
 In disem Ordner werden alle Bilder, die ein Benutzer auf der Website hochlädt gespeichert.
+
+# Kontakt
+Joël Julien Müller - joel.mueller@lehner-versand.ch <br>
+Project Link https://github.com/jojomueller05/LEHN-Werbedisplays
