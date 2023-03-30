@@ -6,6 +6,7 @@
     - [Voraussetzungen](#voraussetzungen)
     - [Installation](#installation)
 - [Backup & Shutdown](#backup--shutdown)
+- [Administration](#administration)
 - [Ordnerstruktur](#Ordnerstruktur)
     - [app](#app)
     - [build](#build)
@@ -55,6 +56,8 @@ cd ./LEHN-Werbedisplays/build
 ```
 sudo docker-compose up -d
 ``` 
+4. Die Website lauft nun auf Port 9000. <br>
+Siehe [http://localhost:9000](http://localhost:9000)
 # Backup & Shutdown
 Da die Datenbank dieser Applikation auch in einem Docker Conntainer ist, muss man vor dem Herunterfahren der Container, einen SQL DUMP auf der DB machen.
 
@@ -64,6 +67,10 @@ Wenn man die Appliaktion, bzw. die Container wieder hochfahren möchte, muss man
 ```
 sudo docker-compose down --volumes
 ```
+
+# Administration
+In seltenen Fällen kann es vorkommen, dass man auf der Datenbank als Systemadministrator direkt etwas machen muss. Für diesen Fall, ist PHPMyAdmin installiert. Das Portal erreicht man über den Port 8080.
+[http://localhost:8080](http://localhost:8080)
 
 # Ordnerstruktur
 Hier ein kleiner Überblick über die Ordnerstrucktur der Website.
