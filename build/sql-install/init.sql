@@ -1,7 +1,7 @@
 -- Build SQL DB
 
-CREATE TABLE tbl_user(
-    id_user int PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
+CREATE TABLE user(
+    user int PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
     email text unique,
     password text,
     logged_in boolean,
@@ -9,22 +9,22 @@ CREATE TABLE tbl_user(
     last_login_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE tbl_shop(
-    id_shop int PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
+CREATE TABLE shop(
+    id int PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
     name text,
     screens int
 );
 
-CREATE TABLE tbl_image (
-    id_image int PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
+CREATE TABLE image (
+    id int PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
     file_path text
 );
 
-CREATE TABLE tbl_screen (
-    id_screen int PRIMARY KEY,
-    fs_shop int,
-    fs_image int,
+CREATE TABLE screen (
+    id int PRIMARY KEY,
+    shop_fs int,
+    image_fs int,
     screen int,
-    FOREIGN KEY (fs_shop) REFERENCES tbl_shop(id_shop),
-    FOREIGN KEY (fs_image) REFERENCES tbl_image(id_image)
+    FOREIGN KEY (shop_fs) REFERENCES shop(id),
+    FOREIGN KEY (image_fs) REFERENCES image(id)
 );
