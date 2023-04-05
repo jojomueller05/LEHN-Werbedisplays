@@ -1,24 +1,20 @@
-<footer class="p-3 mt-5 pt-5 bg-dark-subtle text-emphasis-dark fixed-bottom">
+<footer class="p-3 mt-5 pt-5 text-white fixed-bottom bg-dark">
     <div class="row">
       <div class="col-12 col-md-4 text-center">
         <h4 class="fs-5">Contact</h4>
-        <div class="row">
-          <div class="col">
-            <ul style="list-style-type: none;">
-              <li>
-                <img src="app\img\ticket.png" alt="">
-                <a class="text-decoration-none text-dark" href="https://www.servicedesk.lehner-versand.ch">servicedesk.lehner-versand.ch</a>
-              </li>
-              <li>
-                <img src="app\img\email.png" alt="">
-                <a class="text-decoration-none text-dark" href="mailto:servicedesk@lehner-versand.ch">servicedesk@lehner-versand.ch</a>
-              </li>
-              <li>
-                <img src="app\img\phone-call.png" alt="">
-                <a class="text-decoration-none text-dark" href="tel:00419267400">041 926 74 00</a>
-              </li>
-            </ul>
-          </div>
+        <div class="container w-50 text-start">
+            <div class="col">
+                <img src="app\img\ticket.png" style="-webkit-filter: invert(100%); filter: invert(100%);" alt="">
+                <a class="text-decoration-none text-white" href="https://www.servicedesk.lehner-versand.ch">servicedesk.lehner-versand.ch</a>                
+            </div>
+            <div class="col">
+                <img src="app\img\email.png" style="-webkit-filter: invert(100%); filter: invert(100%);" alt="">
+                <a class="text-decoration-none text-white" href="mailto:servicedesk@lehner-versand.ch">servicedesk@lehner-versand.ch</a>                
+            </div>
+            <div class="col">
+                <img src="app\img\phone-call.png" style="-webkit-filter: invert(100%); filter: invert(100%);" alt="">
+                <a class="text-decoration-none text-white" href="tel:00419267400">041 926 74 00</a>              
+            </div>
         </div>
       </div>
       <div class="col-12 col-md-4 text-center">
