@@ -25,7 +25,7 @@
       </div>
       <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mt-5">
         <a href="https://www.lehner-versand.ch">
-          <img src="app\img\lehner-logo.png" alt="Lehner Versand Logo">
+          <img class="img-fluid" src="app\img\lehner-logo.png" alt="Lehner Versand Logo">
         </a>
       </div>
       
