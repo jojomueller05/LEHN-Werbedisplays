@@ -1,7 +1,7 @@
-<footer class="p-3 mt-5 pt-5 text-white fixed-bottom bg-dark">
+<footer class="p-3 mt-auto pt-5 text-white  bg-dark">
     <div class="row">
       <div class="col-12 col-md-4 text-center">
-        <h4 class="fs-5">Contact</h4>
+        <h4 class="text-uppercase mb-4">Contact</h4>
         <div class="container w-50 text-start">
             <div class="col">
                 <img src="app\img\ticket.png" style="-webkit-filter: invert(100%); filter: invert(100%);" alt="">
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="col-12 col-md-4 text-center">
-        <h4 class="fs-5">About</h4>
+        <h4 class="text-uppercase mb-4">About</h4>
         <p>Checkout the Project on <a href="https://github.com/jojomueller05/LEHN-Werbedisplays">GitHUB</a>
           <br> ~ Joël Julien Müller
         </p>
@@ -29,7 +29,15 @@
         </a>
       </div>
     </div>
+    <div class="text-center p-3 border-top border-white mt-5">
+        © 2023 Copyright: No Copyright
+      </div>
   </footer>
-  
+  <style>
+    body {
+  min-height: 100vh;
+}
+
+  </style>
 </body>
 </html>

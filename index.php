@@ -3,7 +3,7 @@
 require_once('./app/views/header.php')
 ?>
 <!--Content goes here-->
-<div class="container">
+<div class="container min-vh-100">
     <div class="row justify-content-center mt-5">
       <div class="col-sm-6 col-md-4">
         <div class="card">
