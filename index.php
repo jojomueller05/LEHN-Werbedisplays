@@ -38,8 +38,6 @@ require_once('./app/views/header.php')
     </div>
   </div>
   
-  
-  
   <script>
     const showPasswordButton = document.getElementById("show-password");
     const passwordInput = document.getElementById("password");

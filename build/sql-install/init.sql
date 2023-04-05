@@ -28,3 +28,6 @@ CREATE TABLE screen (
     FOREIGN KEY (shop_fs) REFERENCES shop(id),
     FOREIGN KEY (image_fs) REFERENCES image(id)
 );
+
+-- Creat testuser
+INSERT INTO user (email, password, logged_in) VALUES ('testuser@example.com', 'pass123', false);
