@@ -10,7 +10,7 @@ require_once('./app/views/header.php');
         <div class="card p-4">
           <div class="card-body">
             <h2 class="card-title text-center mb-4">Login</h2>
-            <p class="text-black-50 text-center mb-5">Please enter your login and password!</p>
+            <p class="text-black-50 text-center mb-5">Please enter your E-Mail and password!</p>
             <form action="./app/includes/login.ini.php" method="post">
               <div class="mb-3">
                 <label for="email" class="form-label fs-5">Email address</label>
