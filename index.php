@@ -18,6 +18,15 @@ require_once('./app/views/header.php');
                   if ($_GET['error'] == 'emptyFields'){ echo 'is-invalid'; }
                   if ($_GET['error'] == 'loginFaild'){ echo 'is-invalid'; }
                 } ?>" id="email" placeholder="Enter email" name="frm-login-mail">
+
+                  <?php if (isset($_GET['error'])){
+                    if ($_GET['error'] == 'emptyFields'){
+                      echo '<div class="invalid-feedback">Please fill in Field!</div>';
+                    }
+                    if ($_GET['error'] == 'loginFaild'){
+                       echo '<div class="invalid-feedback">E-Mail or Password is wrong!</div>'; 
+                      }
+                  } ?>
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label fs-5">Password</label>
@@ -27,18 +36,19 @@ require_once('./app/views/header.php');
                     if ($_GET['error'] == 'emptyFields'){ echo 'is-invalid'; }
                     if ($_GET['error'] == 'loginFaild'){ echo 'is-invalid'; }
                   } ?>" id="password" placeholder="Enter password" name="frm-login-password">
-
+                    
                   <button class="btn btn-outline-secondary" type="button" id="show-password">
                     <i class="bi bi-eye"></i>
                   </button>
                   <?php if (isset($_GET['error'])){
                     if ($_GET['error'] == 'emptyFields'){
-                      echo '<div class="invalid-feedback">Please fill in all Fields!</div>';
+                      echo '<div class="invalid-feedback">Please fill in Field!</div>';
                     }
                     if ($_GET['error'] == 'loginFaild'){
                        echo '<div class="invalid-feedback">E-Mail or Password is wrong!</div>'; 
                       }
                   } ?>
+
                 </div>
               </div>
               <div class="d-grid gap-2">
