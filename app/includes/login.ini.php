@@ -17,10 +17,11 @@ if (isset($_POST["frm-login-submit"])){
     }
 
     if (login($login_mail, $login_password) == true){
-        echo "<h1>login Sucess</h1>";
+        header('location: ../../index.php?error=loginSuccess');
         exit();
+
     } else {
-        header('location: ../../index.php?error=WrongPassword');
+        header('location: ../../index.php?error=loginFaild');
         exit();
     }
 
