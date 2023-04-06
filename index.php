@@ -16,6 +16,7 @@ require_once('./app/views/header.php');
                 <label for="email" class="form-label fs-5">Email address</label>
                 <input type="email" class="form-control fs-5 <?php if (isset($_GET['error'])){
                   if ($_GET['error'] == 'emptyFields'){ echo 'is-invalid'; }
+                  if ($_GET['error'] == 'loginFaild'){ echo 'is-invalid'; }
                 } ?>" id="email" placeholder="Enter email" name="frm-login-mail">
               </div>
               <div class="mb-3">
@@ -24,6 +25,7 @@ require_once('./app/views/header.php');
 
                   <input type="password" class="form-control fs-5 <?php if (isset($_GET['error'])){
                     if ($_GET['error'] == 'emptyFields'){ echo 'is-invalid'; }
+                    if ($_GET['error'] == 'loginFaild'){ echo 'is-invalid'; }
                   } ?>" id="password" placeholder="Enter password" name="frm-login-password">
 
                   <button class="btn btn-outline-secondary" type="button" id="show-password">
@@ -33,6 +35,9 @@ require_once('./app/views/header.php');
                     if ($_GET['error'] == 'emptyFields'){
                       echo '<div class="invalid-feedback">Pleas fill in all Fields!</div>';
                     }
+                    if ($_GET['error'] == 'loginFaild'){
+                       echo '<div class="invalid-feedback">E-Mail or Password is wrong!</div>'; 
+                      }
                   } ?>
                 </div>
               </div>
