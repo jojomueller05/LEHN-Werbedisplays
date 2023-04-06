@@ -40,18 +40,12 @@ if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] == true){
 <?php
 } else{
 ?>
-  <nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand mx-3" href="./index.php">
-        <img src="app\img\lehner-logo.png" alt="Lehner Versand Logo" class="img-fluid">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      </div>
-    </div>
-  </nav>
+  <style>
+    body {
+      background: rgb(238,174,202);
+      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    }
+  </style>
   <?php
 }
 ?>
