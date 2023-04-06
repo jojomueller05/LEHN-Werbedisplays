@@ -19,6 +19,13 @@ require_once('./app/views/header.php');
                         if ($_GET['error'] == 'EmailAlreadyInUse'){ echo 'is-invalid'; }
                   }
                     ?>" id="email" placeholder="Enter email" name="frm-register-mail">
+                                      <?php 
+                  if (isset($_GET['error'])){
+                      if ($_GET['error'] == 'EmailAlreadyInUse'){
+                        echo '<div class="invalid-feedback">E-Mail is already registerd</div>';
+                      }
+                  } 
+                ?>
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label fs-5">Password</label>
@@ -54,10 +61,6 @@ require_once('./app/views/header.php');
                       if ($_GET['error'] == 'passwordNotMatching'){
                         echo '<div class="invalid-feedback">Please check that both passwords match</div>';
                       }
-                      if ($_GET['error'] == 'EmailAlreadyInUse'){
-                        echo '<div class="invalid-feedback">E-Mail is already registerd</div>';
-                      }
-
                   } 
                 ?>
                 </div>
