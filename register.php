@@ -21,6 +21,9 @@ require_once('./app/views/header.php');
                     ?>" id="email" placeholder="Enter email" name="frm-register-mail">
                                       <?php 
                   if (isset($_GET['error'])){
+                    if ($_GET['error'] == 'emptyFields'){
+                      echo '<div class="invalid-feedback">Please fill in Field!</div>';
+                    }
                       if ($_GET['error'] == 'EmailAlreadyInUse'){
                         echo '<div class="invalid-feedback">E-Mail is already registerd</div>';
                       }
@@ -39,6 +42,16 @@ require_once('./app/views/header.php');
                   <button class="btn btn-outline-secondary" type="button" id="show-password">
                     <i class="bi bi-eye"></i>
                   </button>
+                  <?php 
+                  if (isset($_GET['error'])){
+                      if ($_GET['error'] == 'emptyFields'){
+                        echo '<div class="invalid-feedback">Please fill in Field!</div>';
+                      }
+                      if ($_GET['error'] == 'passwordNotMatching'){
+                        echo '<div class="invalid-feedback">Password not matching!</div>';
+                      }
+                  } 
+                ?>
                 </div>
               </div>
               <div class="mb-3 mt-3">
@@ -56,10 +69,10 @@ require_once('./app/views/header.php');
                   <?php 
                   if (isset($_GET['error'])){
                       if ($_GET['error'] == 'emptyFields'){
-                        echo '<div class="invalid-feedback">Please fill in all Fields!</div>';
+                        echo '<div class="invalid-feedback">Please fill in Field!</div>';
                       }
                       if ($_GET['error'] == 'passwordNotMatching'){
-                        echo '<div class="invalid-feedback">Please check that both passwords match</div>';
+                        echo '<div class="invalid-feedback">Password not matching!</div>';
                       }
                   } 
                 ?>
