@@ -28,12 +28,11 @@ function UserAlreadyLoggedIn(){
     } else {
         return false;
     }
-    
 
 }
 
 function login($login_mail, $login_password){
-require_once ('dbh.inc.php');
+require ('dbh.inc.php');
 
         $stmt = $pdo->prepare('SELECT * FROM user WHERE email = ?');
         $stmt->execute([$login_mail]);
