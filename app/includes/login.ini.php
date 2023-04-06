@@ -8,10 +8,20 @@ if (isset($_POST["frm-login-submit"])){
     
     if (emptyLoginFields($login_mail, $login_password) == true){
         header('location: ../../index.php?error=emptyFields');
+        exit();
     }
 
-    if (login($login_mail, $login_password)){
-        echo $test;
+    if (UserAlreadyLoggedIn() == true){
+        header('location: ../../index.php?error=UserAlreadyLoggedIn');
+        exit();
+    }
+
+    if (login($login_mail, $login_password) == true){
+        echo "<h1>login Sucess</h1>";
+        exit();
+    } else {
+        header('location: ../../index.php?error=WrongPassword');
+        exit();
     }
 
 }
