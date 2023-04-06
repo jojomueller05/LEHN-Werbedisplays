@@ -13,12 +13,22 @@ require_once('./app/views/header.php');
             <form action="./app/includes/register.ini.php" method="post">
               <div class="mb-3">
                 <label for="email" class="form-label fs-5">Email address</label>
-                <input type="email" class="form-control fs-5" id="email" placeholder="Enter email" name="frm-register-mail">
+                <input type="email" class="form-control fs-5 <?php 
+                      if (isset($_GET['error'])){
+                        if ($_GET['error'] == 'emptyFields'){ echo 'is-invalid'; }
+                        if ($_GET['error'] == 'EmailAlreadyInUse'){ echo 'is-invalid'; }
+                  }
+                    ?>" id="email" placeholder="Enter email" name="frm-register-mail">
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label fs-5">Password</label>
                 <div class="input-group">
-                  <input type="password" class="form-control fs-5" id="password" placeholder="Enter password" name="frm-register-password">
+                  <input type="password" class="form-control fs-5 <?php 
+                      if (isset($_GET['error'])){
+                        if ($_GET['error'] == 'emptyFields'){ echo 'is-invalid'; }
+                        if ($_GET['error'] == 'passwordNotMatching'){ echo 'is-invalid'; }
+                  }
+                    ?>" id="password" placeholder="Enter password" name="frm-register-password">
                   <button class="btn btn-outline-secondary" type="button" id="show-password">
                     <i class="bi bi-eye"></i>
                   </button>
@@ -27,10 +37,29 @@ require_once('./app/views/header.php');
               <div class="mb-3 mt-3">
                 <label for="password" class="form-label fs-5">Confirm Password</label>
                 <div class="input-group">
-                  <input type="password" class="form-control fs-5" id="password-confirm" placeholder="Enter password" name="frm-register-password-confirm">
+                  <input type="password" class="form-control fs-5 <?php 
+                      if (isset($_GET['error'])){
+                        if ($_GET['error'] == 'emptyFields'){ echo 'is-invalid'; }
+                        if ($_GET['error'] == 'passwordNotMatching'){ echo 'is-invalid'; }
+                  }
+                    ?>" id="password-confirm" placeholder="Enter password" name="frm-register-password-confirm">
                   <button class="btn btn-outline-secondary" type="button" id="show-password-confirm">
                     <i class="bi bi-eye"></i>
                   </button>
+                  <?php 
+                  if (isset($_GET['error'])){
+                      if ($_GET['error'] == 'emptyFields'){
+                        echo '<div class="invalid-feedback">Please fill in all Fields!</div>';
+                      }
+                      if ($_GET['error'] == 'passwordNotMatching'){
+                        echo '<div class="invalid-feedback">Please check that both passwords match</div>';
+                      }
+                      if ($_GET['error'] == 'EmailAlreadyInUse'){
+                        echo '<div class="invalid-feedback">E-Mail is already registerd</div>';
+                      }
+
+                  } 
+                ?>
                 </div>
               </div>
               <div class="d-grid gap-2">
