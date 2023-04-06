@@ -41,7 +41,7 @@ require_once('./app/views/header.php');
               </div>
             </form>
             <div class="mt-5">
-                <p class="mb-0 text-center">Don't have an account? <a href="#!" class="fw-bold">Sign Up</a>
+                <p class="mb-0 text-center">Don't have an account? <a href="./register.php" class="fw-bold">Sign Up</a>
                 </p>
             </div>
           </div>

@@ -35,11 +35,5 @@
       </div>
   </footer>
   
-  <style>
-    body {
-  min-height: 100vh;
-}
-
-  </style>
 </body>
 </html>
