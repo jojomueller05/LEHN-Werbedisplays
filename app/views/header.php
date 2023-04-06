@@ -17,7 +17,9 @@ session_start();
   <style>
     body { min-height: 100vh;}
   </style>
-  
+<?php
+if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] == true){
+?>
   <nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand mx-3" href="./index.php">
@@ -30,8 +32,26 @@ session_start();
         <div class="navbar-nav ms-auto text-light">
           <a class="nav-link active fs-3 mx-5" aria-current="page" href="#">Dashboard</a>
           <a class="nav-link fs-3 mx-5" href="#">Settings</a>
+          <a class="nav-link fs-3 text-danger mx-5" href="#">Logout</a>
         </div>
       </div>
     </div>
   </nav>
-  
+<?php
+} else{
+?>
+  <nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand mx-3" href="./index.php">
+        <img src="app\img\lehner-logo.png" alt="Lehner Versand Logo" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      </div>
+    </div>
+  </nav>
+  <?php
+}
+?>
