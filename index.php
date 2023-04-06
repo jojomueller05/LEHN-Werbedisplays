@@ -33,7 +33,7 @@ require_once('./app/views/header.php');
                   </button>
                   <?php if (isset($_GET['error'])){
                     if ($_GET['error'] == 'emptyFields'){
-                      echo '<div class="invalid-feedback">Pleas fill in all Fields!</div>';
+                      echo '<div class="invalid-feedback">Please fill in all Fields!</div>';
                     }
                     if ($_GET['error'] == 'loginFaild'){
                        echo '<div class="invalid-feedback">E-Mail or Password is wrong!</div>'; 
