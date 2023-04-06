@@ -32,7 +32,7 @@ if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] == true){
         <div class="navbar-nav ms-auto text-light">
           <a class="nav-link active fs-3 mx-5" aria-current="page" href="#">Dashboard</a>
           <a class="nav-link fs-3 mx-5" href="#">Settings</a>
-          <a class="nav-link fs-3 text-danger mx-5" href="#">Logout</a>
+          <a class="nav-link fs-3 text-danger mx-5" href="app\includes\logout.ini.php">Logout</a>
         </div>
       </div>
     </div>
