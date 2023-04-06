@@ -17,32 +17,27 @@ function emptyRegisterFields($register_mail, $register_password, $register_passw
 }
 
 function UserAlreadyLoggedIn(){
-    //Check if a user already is logged in
-    if (isset($_SESSION['user_logged_in'])){
+    require_once ('dbh.inc.php');
+
+    $stmt = $pdo->prepare('SELECT COUNT(*) FROM user WHERE logged_in = ?');
+    $stmt->execute([true]);
+    $loggedInUsers = $stmt->fetchColumn();
+    
+    if ($loggedInUsers > 0) {
         return true;
     } else {
         return false;
     }
+    
+
 }
 
 function login($login_mail, $login_password){
 require_once ('dbh.inc.php');
 
-    //Check if a user already is logged in
-    if (isset($_SESSION['user_logged_in'])){
-        header('location: ../../index.php?error=UserAlreadyLoggedIn');
-        exit();
-
-    } else{
         $stmt = $pdo->prepare('SELECT * FROM user WHERE email = ?');
         $stmt->execute([$login_mail]);
         $user = $stmt->fetch();
-        
-        // account doesnt exist
-        if ($user == false){
-            header('location: ../../index.php?error=invalidEmail');
-            exit();
-        }
         
         if ($user && password_verify($login_password, $user['password'])) {
             
@@ -59,12 +54,11 @@ require_once ('dbh.inc.php');
             $_SESSION['user_mail'] = $user['email'];
             $_SESSION['user_last_login_at'] = $user['last_login_at'];
             $_SESSION['user_logged_in'] = $user['logged_in'];
-            
+
             return true;
         } else {
             return false;
         }
-    }
 
 }
 
